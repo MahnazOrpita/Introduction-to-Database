@@ -1,0 +1,49 @@
+(1)
+  create table department(deptid number(3) constraint pkt primary key,dept_name varchar(6)
+  check(dept_name='CSE' or dept_name='EEE' or dept_name='BBA' or dept_name='Eng' or dept_name='Ach'),budget number(6) 
+  default(0));
+
+
+(2)
+   create table course(crs_id number(4) constraint pkc primary key,crs_name varchar2(20)not null,dept_id number(3),
+   constraint fkk foreign key(dept_id) references department(deptid));
+
+
+
+(3)
+  create table student(s_id number,s_name varchar2(20),phone number,address varchar2(50),email varchar2(30),credit_completed 
+  number(3),course_completed number(2),cgpa number,deptno number(5),gender varchar2(6));
+
+
+(4)
+  Alter table student 
+  add constraint pkk primary key(s_id);
+
+
+(6)
+ Alter table student
+ add constraint uk2 unique(email);
+
+(7)
+ Alter table student 
+add constraint fk2 foreign key(deptno) references dept(deptno);
+describe department;
+(8)
+  Alter table student 
+ add constraint chk2 check(gender='Male' or gender='Female');
+
+(9)Alter table student
+disable primary key;
+
+(10)
+Alter table student
+drop constraint chk2;
+
+(11)
+select constraint_name,column_name
+from user_cons_columns
+where table_name='STUDENT';
+
+(12)
+Alter table student
+enable constraint ukk;
