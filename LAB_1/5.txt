@@ -1,0 +1,6 @@
+select ename,empno,deptno
+from emp
+where ename LIKE '%A%';
+
+
+

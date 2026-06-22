@@ -1,0 +1,6 @@
+select distinct job,deptno
+from emp
+where deptno=30;
+
+
+

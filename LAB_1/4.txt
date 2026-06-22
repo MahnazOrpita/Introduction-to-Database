@@ -1,0 +1,5 @@
+select ename,empno,comm
+from emp
+where comm>0;
+
+

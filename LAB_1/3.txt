@@ -1,0 +1,7 @@
+select loc,deptno
+from dept
+where deptno=30;
+
+
+
+

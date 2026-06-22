@@ -1,0 +1,2 @@
+select ename,deptno
+from emp;
