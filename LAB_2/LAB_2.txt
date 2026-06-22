@@ -1,0 +1,45 @@
+1.
+select ename,sal
+from emp
+where sal>2850;
+
+2.
+select ename,deptno
+from emp
+where empno=7566;
+
+3.
+select ename,job,hiredate
+from emp
+where hiredate between '20-Feb-81' and '1-May-81'
+order by hiredate;
+
+4.
+select ename,deptno
+from emp
+where deptno=10 or deptno=30
+order by ename asc;
+
+5.
+select ename,sal
+from emp
+where deptno=10 and deptno=30 or sal>1500;
+
+
+6.
+select ename,hiredate
+from emp
+where hiredate between '01-Jan-1982' and '31-Dec-1982'
+
+7.
+select ename,job
+from emp
+where mgr is null;
+
+8.
+select ename,sal,comm
+from emp
+where comm>0
+order by comm desc;
+
+
